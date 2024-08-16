@@ -1,0 +1,298 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Contêiner para centralizar o conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navegação */
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav-list a{
+    text-decoration: none;
+    margin: 0 1ch;
+    color: white;
+    text-decoration: underline black;
+}
+
+/* Estilo da logo */
+.logo {
+    height: 100px;
+}
+
+/* Hero section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    background-color: green;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Faixa 1: Introdução */
+.biography {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.biography-img {
+    height: 50ch;
+    border-radius: 15ch;
+    flex: 1 1 40%;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.biography h2, .biography h3, .biography p {
+    flex: 1 1 50%;
+    margin: 10px;
+}
+
+.biography h2, .biography h3 {
+    font-size: 1.5rem;
+}
+
+.biography p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsividade*/
+@media (max-width: 768px) {
+    .biography {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .biography-img {
+        height: 20ch;
+        border-radius: 10ch;
+        max-width: 200px;
+    }
+
+    .biography h2, .biography h3 {
+        font-size: 1.2rem;
+    }
+
+    .biography p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .biography h2, .biography h3 {
+        font-size: 1rem;
+    }
+
+    .biography p {
+        font-size: 0.8rem;
+    }
+
+    .biography-img {
+        height: 15ch;
+        border-radius: 7.5ch;
+        max-width: 150px;
+    }
+}
+
+/* Faixa 2: Serviços Oferecidos */
+.services {
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.services li {
+    flex: 1 1 45%;
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Faixa 3: Vantagens e Benefícios */
+.benefits {
+    padding: 50px 0;
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.benefits ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.benefits li {
+    flex: 1 1 45%;
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Faixa 4: Depoimentos */
+.testimonials {
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonials p {
+    margin: 20px 0;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Faixa 5: Chamada para Ação */
+.cta {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 30px;
+}
+
+.cta form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta input,
+.cta textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cta button {
+    padding: 10px 20px;
+    border: none;
+    background: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta button:hover {
+    background: #218838;
+}
+
+/* Rodapé */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services ul,
+    .benefits ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services li,
+    .benefits li {
+        flex: 1 1 100%;
+    }
+
+    .cta input,
+    .cta textarea {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .biography-img {
+        height: 20ch;
+        border-radius: 10ch;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .biography-img {
+        height: 15ch;
+        border-radius: 7.5ch;
+    }
+}
